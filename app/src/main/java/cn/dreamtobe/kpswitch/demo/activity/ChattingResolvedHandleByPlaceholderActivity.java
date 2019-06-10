@@ -1,6 +1,7 @@
 package cn.dreamtobe.kpswitch.demo.activity;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -128,5 +129,10 @@ public class ChattingResolvedHandleByPlaceholderActivity extends AppCompatActivi
     public void onMultiWindowModeChanged(boolean isInMultiWindowMode) {
         super.onMultiWindowModeChanged(isInMultiWindowMode);
         KPSwitchConflictUtil.onMultiWindowModeChanged(isInMultiWindowMode);
+    }
+
+    public void onClickGotoTrans(View view) {
+        Intent intent = new Intent(this, TranslucentActivity.class);
+        startActivity(intent);
     }
 }
